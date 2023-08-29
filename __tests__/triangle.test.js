@@ -16,7 +16,7 @@ describe('Triangle', () => {
 
   test('will define what is a triangle', () => {
     const triangle = new Triangle(2,4,5);
-    expect(triangle.s1 < (triangle.s2 + triangle.s3) && triangle.s3 < (triangle.s1 + triangle.s2) && triangle.s2 < (triangle.s1 + triangle.s3)).toEqual();
+    expect(triangle.s1 < (triangle.s2 + triangle.s3) && triangle.s3 < (triangle.s1 + triangle.s2) && triangle.s2 < (triangle.s1 + triangle.s3)).toEqual(true);
   });
 });
 
