@@ -1,7 +1,6 @@
 import Triangle from './../src/index.js';
 
 describe('Triangle', () => {
-
   let reusableTriangle;
 
   beforeEach(() => {
@@ -14,22 +13,13 @@ describe('Triangle', () => {
     expect(reusableTriangle.s3).toEqual(5);
   });
 
-  test('will define what is a triangle', () => {
-    const triangle = new Triangle(2,4,5);
-    expect(triangle.s1 < (triangle.s2 + triangle.s3) && triangle.s3 < (triangle.s1 + triangle.s2) && triangle.s2 < (triangle.s1 + triangle.s3)).toEqual(true);
+  test('will define what is not a triangle', () => {
+    const ourTriangle = new Triangle(5,5,5);
+    expect(ourTriangle.checkShape()).toEqual(console.log("is a triangle"));
   });
-});
 
-//     if(s2 + s3 > s1 && s1 + s2 > s3 && s3 + s1 > s2) {
-//         if (s1 === s2 && s2 === s3 && s3 === s1) {
-//             response = "Equilateral triangle.";
-//         } else if (s1 === s2 || s2 === s3 || s3 === s1) {
-//             response = "Isosceles triangle.";
-//         } else {
-//             response = "Scalene triangle.";
-//         }
-//     } else {
-//         response = "Not a triangle.";
-//     }
-//     return response;
-// }
+  test('will define what equilateral triangle', () => {
+    expect(reusableTriangle.checkShape()).toEqual('Equilateral triangle');
+  });
+
+});

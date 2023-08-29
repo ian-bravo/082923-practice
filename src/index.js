@@ -1,14 +1,20 @@
 // Business Logic
-
-
-
 export default function Triangle(s1, s2, s3) {
-    //let response;
+    // let response;
     this.s1 = s1;
     this.s2 = s2;
     this.s3 = s3;
 }
-//     if(s2 + s3 > s1 && s1 + s2 > s3 && s3 + s1 > s2) {
+
+Triangle.prototype.checkShape = function() {
+    if ((this.s1 < (this.s2 + this.s3)) && (this.s3 < (this.s1 + this.s2)) && (this.s2 < (this.s1 + this.s3))) {
+        console.log("is a triangle");
+        if (this.s1 === this.s2 && this.s2 === this.s3 && this.s3 === this.s1) {
+            return "Equilateral triangle";
+        }
+    } 
+    }
+
 //         if (s1 === s2 && s2 === s3 && s3 === s1) {
 //             response = "Equilateral triangle.";
 //         } else if (s1 === s2 || s2 === s3 || s3 === s1) {
@@ -16,11 +22,11 @@ export default function Triangle(s1, s2, s3) {
 //         } else {
 //             response = "Scalene triangle.";
 //         }
-//     } else {
-//         response = "Not a triangle.";
-//     }
-//     return response;
-// }
+    // } else {
+    //     response = "Not a triangle.";
+    // }
+    // return response;
+
 
 
 
