@@ -2,8 +2,8 @@
 
 
 
-// export function triangleDeterminer(s1, s2, s3) {
-//     let response;
+export function triangleDeterminer(s1, s2, s3) {
+    let response;}
 //     if(s2 + s3 > s1 && s1 + s2 > s3 && s3 + s1 > s2) {
 //         if (s1 === s2 && s2 === s3 && s3 === s1) {
 //             response = "Equilateral triangle.";

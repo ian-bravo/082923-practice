@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode=development",
     "start": "npm run build && webpack-dev-server --open --mode=development",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
